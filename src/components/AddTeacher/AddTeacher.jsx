@@ -3,6 +3,7 @@ import ListContext from '../../store/context-list';
 
 const AddTeacher = (props) => {
 
+  const context = useContext(ListContext);
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const personalIDRef = useRef();
@@ -25,16 +26,28 @@ const AddTeacher = (props) => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
-    const teacher = {
-      firstName: firstNameRef.current.value,
-      lastName: lastNameRef.current.value,
-      personalIDnumber: personalIDRef.current.value,
-      email: emailRef.current.value,
-      mobile: mobileRef.current.value,
-      competencies: competenciesRef.current.value,
-      id: idRef.current.value
+
+      let firstName= firstNameRef.current.value;
+      let lastName= lastNameRef.current.value;
+      let personalIDnumber=personalIDRef.current.value;
+      let email= emailRef.current.value;
+      let mobile= mobileRef.current.value;
+      let competencies= competenciesRef.current.value;
+      let id = idRef.current.value;
+
+   
+    const body = {
+      firstName, lastName, personalIDnumber, email, mobile, competencies, id 
     }
-    props.onSave(teacher);
+
+    
+    fetch('http://localhost:3000/courses', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
   }
 
   const onCancelClickHandler = (e) => {

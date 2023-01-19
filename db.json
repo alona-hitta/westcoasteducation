@@ -1,0 +1,57 @@
+{
+    "courses": [
+      {
+        "id": 1,
+        "courseId": "DS123",
+        "name": "Data Structures & Algorithms ES6+Javascript",
+        "length": "5 weeks",
+        "description": "Understand data structures and the associated algorithms, as well as the context in which they are used. Master existing JavaScript data structures such as array, set and map and learn how to implement new ones such as stacks, linked lists, trees and graphs. All concepts are explained in an easy way, followed by examples.You will gain an in-depth knowledge of how hash tables and set data structure functions, as well as how trees and hash maps This course is an accessible route deeper into JavaScript data structures and algorithms.",
+        "startDate": "2023-04-06"
+      },
+      {
+        "id": 2,
+        "courseId": "JS345",
+        "name": "JavaScript Patterns",
+        "length": "4 weeks",
+        "description": "This course helps you answer that question with numerous JavaScript coding patterns and best practices. If you're an experienced developer looking to solve problems related to objects, functions, inheritance, and other language-specific categories, the abstractions and code templates in this guide are ideal -- whether you're writing a client-side, server-side, or desktop application with JavaScript.",
+        "startDate": "2023-03-11"
+      },
+      {
+        "id": 3,
+        "courseId": "TV567",
+        "name": "Testing Vue.js Components with Jest",
+        "length": "5 weeks",
+        "description": "Unit test your Vue.js components with this fully-featured JavaScript testing frameworkKey FeaturesUnderstand the various testing styles and their purposeGain insight into how to test methods by avoiding dependenciesExplore snapshot testing and its applicationsBook DescriptionUnit testing in modern component-based JavaScript frameworks is not straightforward. You need a test suite that is reliable and runs quickly. Components are connected to one another, and the browser adds a layer of UI, which makes everything inter-dependent while we test components in isolation. Jest is a fully-featured JavaScript testing framework that will do all your work for you.",
+        "startDate": "2023-05-21"
+      }
+    ],
+    "teachers": [
+      {
+        "id": "1",
+        "firstName": "Michael",
+        "lastName": "Scott",
+        "securityNumber": "19740806-0888",
+        "email": "michael.scott@egmail.com",
+        "mobileNumber": "0731357776",
+        "competence": ["programming", "javascript", "c++"]
+      },
+      {
+        "id": "2",
+        "firstName": "Emma",
+        "lastName": "Stone",
+        "securityNumber": "19801116-0588",
+        "email": "emma.stone@email.com",
+        "mobileNumber": "0731327790",
+        "competence": ["Jest", "Node.js", "React Native"]
+      },
+      {
+        "id": "3",
+        "firstName": "Jessica",
+        "lastName": "Smith",
+        "securityNumber": "90566-7771",
+        "email": "jessica.smith@email.com",
+        "mobileNumber": "0732267778",
+        "competence": ["React.js", "backend development", "Vue.js"]
+      }
+    ]
+  }

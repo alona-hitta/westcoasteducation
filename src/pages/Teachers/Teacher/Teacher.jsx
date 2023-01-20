@@ -9,8 +9,7 @@ const Teacher = () => {
     const [teacher, setTeacher] = useState(null);
     
     useEffect(() => {
-        const currentTeacher = context.teachers.find(teacher => teacher.id === teacherId )
-        console.log(currentTeacher)
+        const currentTeacher = context.teachers.find(teacher => teacher.id === parseInt(teacherId) )
         setTeacher(currentTeacher);
     }, [teacherId, context.teachers])
 

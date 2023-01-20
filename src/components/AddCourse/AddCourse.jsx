@@ -48,10 +48,6 @@ const AddCourse = () => {
             },
             body: JSON.stringify(course),
           });
-      
-          if (response.status === 201) {
-            context.getData('courses');
-          }
       }
       catch(error) {
         console.log(error);

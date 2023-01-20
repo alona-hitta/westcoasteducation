@@ -25,77 +25,12 @@
       "startDate": "2023-05-21"
     },
     {
-      "firstName": "test",
-      "lastName": "test",
-      "personalIDnumber": "434343",
-      "email": "eenko@hitta.se",
-      "mobile": "34444",
-      "competencies": "dfdfd",
-      "id": "34"
-    },
-    {
-      "title": "w",
-      "courseNumber": "21",
-      "startDate": "2023-01-25",
-      "duration": "212",
-      "description": "212",
-      "id": "-qgZ93C"
-    },
-    {
-      "title": "w",
-      "courseNumber": "21",
-      "startDate": "2023-01-25",
-      "duration": "212",
-      "description": "212",
-      "id": "MTPUQVv"
-    },
-    {
-      "title": "w",
-      "courseNumber": "21",
-      "startDate": "2023-01-25",
-      "duration": "212",
-      "description": "212",
-      "id": "25H13P2"
-    },
-    {
-      "title": "w",
-      "courseNumber": "21",
-      "startDate": "2023-01-25",
-      "duration": "212",
-      "description": "212",
-      "id": "t77R1Iv"
-    },
-    {
-      "title": "w",
-      "courseNumber": "21",
-      "startDate": "2023-01-25",
-      "duration": "212",
-      "description": "212",
-      "id": "wuSlzKa"
-    },
-    {
-      "title": "w",
-      "courseNumber": "21",
-      "startDate": "2023-01-25",
-      "duration": "212",
-      "description": "212",
-      "id": "r3IHa0k"
-    },
-    {
-      "title": "test",
+      "title": "Test Vue",
       "courseNumber": "3232",
       "startDate": "2023-01-25",
-      "duration": "322",
-      "description": "32323",
-      "id": "AHqmc2I"
-    },
-    {
-      "title": "test",
-      "courseNumber": "3232",
-      "startDate": "2023-01-25",
-      "duration": "322",
-      "description": "32323",
-      "id": "b7gquVg"
+      "duration": "4",
+      "description": "test about Vue",
+      "id": 4
     }
   ],
   "teachers": [
@@ -146,6 +81,15 @@
       "mobile": "23223",
       "competencies": "3232",
       "id": "323"
+    },
+    {
+      "firstName": "test1",
+      "lastName": "test4",
+      "personalIDnumber": "475858595",
+      "email": "r33r3@gmail.com",
+      "mobile": "444444",
+      "competencies": "444",
+      "id": "44"
     }
   ]
 }

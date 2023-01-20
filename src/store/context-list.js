@@ -43,7 +43,7 @@ export const ContextListProvider = (props) => {
     }
 
     const addCourse = (course) => {
-        setTeachers([
+        setCourses([
             ...teachers, course
         ])
     }

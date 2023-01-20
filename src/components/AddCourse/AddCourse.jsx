@@ -2,7 +2,7 @@ import { useContext, useRef } from 'react';
 
 import ListContext from '../../store/context-list';
 
-const AddCourse = () => {
+const AddCourse = (props) => {
     
     const context = useContext(ListContext);
 

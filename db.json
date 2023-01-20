@@ -33,7 +33,7 @@
         "securityNumber": "19740806-0888",
         "email": "michael.scott@egmail.com",
         "mobileNumber": "0731357776",
-        "competence": ["programming", "javascript", "c++"]
+        "competenceList": ["programming", "javascript", "c++"]
       },
       {
         "id": "2",
@@ -42,7 +42,7 @@
         "securityNumber": "19801116-0588",
         "email": "emma.stone@email.com",
         "mobileNumber": "0731327790",
-        "competence": ["Jest", "Node.js", "React Native"]
+        "competenceList": ["Jest", "Node.js", "React Native"]
       },
       {
         "id": "3",
@@ -51,7 +51,7 @@
         "securityNumber": "90566-7771",
         "email": "jessica.smith@email.com",
         "mobileNumber": "0732267778",
-        "competence": ["React.js", "backend development", "Vue.js"]
+        "competenceList": ["React.js", "backend development", "Vue.js"]
       }
     ]
   }

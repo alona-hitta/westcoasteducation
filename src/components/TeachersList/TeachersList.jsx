@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const TeachersList = ({teachers}) => {
 
     return (
@@ -16,6 +18,9 @@ const TeachersList = ({teachers}) => {
                     <div>
                         <span className='list__text'>Mobile number: {teacher.mobileNumber}</span>
                     </div>
+                    <Link  to={`/teachers/${teacher.id}`} >
+                        Read more
+                    </Link>
                 </li>
             ))}
             </ul>  

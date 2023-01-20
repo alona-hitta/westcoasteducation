@@ -36,7 +36,7 @@ const AddTeacher = (props) => {
       let id = idRef.current.value;
 
    
-    const body = {
+    const teacher = {
       firstName, lastName, personalIDnumber, email, mobile, competencies, id 
     }
 
@@ -46,7 +46,7 @@ const AddTeacher = (props) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify(teacher),
     });
   }
 

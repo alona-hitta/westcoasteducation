@@ -21,6 +21,7 @@ export const ContextListProvider = (props) => {
                 setError(error);
               })
           };
+     
           const getTeachersList = () => {
             fetch(`${baseUrl}teachers`)
               .then((response) => response.json())

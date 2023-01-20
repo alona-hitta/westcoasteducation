@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const CoursesList = ({courses}) => {
     return (
         <ul className='courses'>
@@ -7,6 +9,9 @@ const CoursesList = ({courses}) => {
                 <div>Course number: {course.courseId}</div>
                 <div>Course length: {course.length}</div>
                 <div>Course start date: {course.startDate}</div>
+                <Link className='list__link' to={`/courses/${course.id}`} >
+                    Read more
+                </Link>
         </li>  
             )
    )}

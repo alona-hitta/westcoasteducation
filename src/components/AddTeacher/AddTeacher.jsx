@@ -40,14 +40,16 @@ const AddTeacher = (props) => {
       firstName, lastName, personalIDnumber, email, mobile, competencies, id 
     }
 
+    context.addTeacher(teacher);
+
     
-    fetch('http://localhost:3000/courses', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(teacher),
-    });
+    // fetch('http://localhost:3010/courses', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(teacher),
+    // });
   }
 
   const onCancelClickHandler = (e) => {

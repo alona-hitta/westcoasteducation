@@ -10,7 +10,7 @@ const Courses = () => {
     return ( 
         <>
         <h1>Courses</h1>
-        <a href={AddCourse}>Add a new course</a>
+        
         {context.courses && <CoursesList courses={context.courses}/>}
         </>
      );

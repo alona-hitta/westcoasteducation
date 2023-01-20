@@ -18,6 +18,7 @@ function App() {
             <Route path='/teachers' element={<Teachers />} />    
             <Route path='/teachers/:teacherId' element={<Teacher />}/>  
           </Routes>
+          <div id="modal-root"></div>
         </div>
   </Router>
   );

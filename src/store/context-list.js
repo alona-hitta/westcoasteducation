@@ -4,6 +4,7 @@ import {baseUrl} from '../shared';
 const ContextList = React.createContext({
     teachers:[],
     courses: [],
+    addTeacher: () => {},
     error: null
 })
 
@@ -34,12 +35,19 @@ export const ContextListProvider = (props) => {
         getTeachersList();
     }, []);
 
+    const addTeacher = (teacher) => {
+        setTeachers([
+            ...teachers, teacher
+        ])
+    }
+
 
     return(
         <ContextList.Provider 
         value={{
             teachers,
             courses,
+            addTeacher,
             error
         }}>
             {props.children}

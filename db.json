@@ -25,11 +25,11 @@
       "startDate": "2023-05-21"
     },
     {
-      "title": "Test Vue",
-      "courseNumber": "3232",
-      "startDate": "2023-01-25",
-      "duration": "4",
-      "description": "test about Vue",
+      "title": "e3ee",
+      "courseId": "43",
+      "startDate": "2023-01-26",
+      "length": "43",
+      "description": "434",
       "id": 4
     }
   ],
@@ -41,11 +41,7 @@
       "securityNumber": "19740806-0888",
       "email": "michael.scott@egmail.com",
       "mobileNumber": "0731357776",
-      "competenceList": [
-        "programming",
-        "javascript",
-        "c++"
-      ]
+      "competencies": "programmming, js"
     },
     {
       "id": 2,
@@ -54,11 +50,7 @@
       "securityNumber": "19801116-0588",
       "email": "emma.stone@email.com",
       "mobileNumber": "0731327790",
-      "competenceList": [
-        "Jest",
-        "Node.js",
-        "React Native"
-      ]
+      "competencies": "programmming, js"
     },
     {
       "id": 3,
@@ -67,29 +59,16 @@
       "securityNumber": "90566-7771",
       "email": "jessica.smith@email.com",
       "mobileNumber": "0732267778",
-      "competenceList": [
-        "React.js",
-        "backend development",
-        "Vue.js"
-      ]
+      "competencies": "programmming, js"
     },
     {
-      "firstName": "3232",
-      "lastName": "3232",
-      "personalIDnumber": "323",
-      "email": "323@gmail.com",
-      "mobile": "23223",
-      "competencies": "3232",
-      "id": "323"
-    },
-    {
-      "firstName": "test1",
-      "lastName": "test4",
-      "personalIDnumber": "475858595",
-      "email": "r33r3@gmail.com",
-      "mobile": "444444",
-      "competencies": "444",
-      "id": "44"
+      "firstName": "John",
+      "lastName": "Smith",
+      "securityNumber": "345689009338",
+      "email": "john@gmail.com",
+      "mobileNumber": "436473738483",
+      "competencies": "progframming",
+      "id": "3232"
     }
   ]
 }

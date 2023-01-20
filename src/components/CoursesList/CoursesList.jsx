@@ -4,7 +4,7 @@ const CoursesList = ({courses}) => {
     return (
         <ul className='courses'>
             {courses?.map(course => (
-                <li key={course.id}>
+                <li key={course.courseId}>
                 <h2>Course name: {course.name}</h2>
                 <div>Course number: {course.courseId}</div>
                 <div>Course length: {course.length}</div>

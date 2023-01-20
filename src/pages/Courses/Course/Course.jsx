@@ -11,7 +11,7 @@ const Course = () => {
     const [course, setCourse] = useState(null);
     
     useEffect(() => {
-        const currentCourse = context.courses.find(course => course.id === parseInt(courseId) )
+        const currentCourse = context.courses.find(course => course.id === parseInt(courseId, 10) )
         setCourse(currentCourse);
     }, [courseId, context.courses])
 

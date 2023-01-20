@@ -9,7 +9,8 @@ const Teacher = () => {
     const [teacher, setTeacher] = useState(null);
     
     useEffect(() => {
-        const currentTeacher = context.teachers.find(teacher => teacher.id === parseInt(teacherId) )
+        const currentTeacher = context.teachers.find(teacher => teacher.id === parseInt(teacherId, 10) )
+        console.log('current teacher', currentTeacher)
         setTeacher(currentTeacher);
     }, [teacherId, context.teachers])
 
@@ -22,7 +23,7 @@ const Teacher = () => {
                                 <p>Email: {teacher.email}</p>
                                 <p>Phone: {teacher.mobileNumber}</p>
                                 <b>Competencies</b>
-                                {teacher.competenceList?.map((competence, index) => {
+                                {teacher.competencies?.split(',').map((competence, index) => {
                                     return (
                                         <li key={index}>
                                             {competence}

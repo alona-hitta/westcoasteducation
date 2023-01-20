@@ -30,15 +30,15 @@ const AddTeacher = (props) => {
 
       let firstName= firstNameRef.current.value;
       let lastName= lastNameRef.current.value;
-      let personalIDnumber=personalIDRef.current.value;
+      let securityNumber=personalIDRef.current.value;
       let email= emailRef.current.value;
-      let mobile= mobileRef.current.value;
+      let mobileNumber= mobileRef.current.value;
       let competencies= competenciesRef.current.value;
       let id = idRef.current.value;
 
    
     const teacher = {
-      firstName, lastName, personalIDnumber, email, mobile, competencies, id 
+      firstName, lastName, securityNumber, email, mobileNumber, competencies, id 
     }
 
     context.addTeacher(teacher);
@@ -83,7 +83,7 @@ const AddTeacher = (props) => {
           <label htmlFor="personalID">Personal ID number</label>
           <input 
             className='input'
-            id='personalID'
+            id='securityNumber'
             type="number" 
             placeholder='ex: 35647267-1234'
             ref={personalIDRef}
@@ -101,7 +101,7 @@ const AddTeacher = (props) => {
           <input 
             className='input'
             type="tel"
-            id='mobile'
+            id='mobileNumber'
             ref={mobileRef} 
             required
           />

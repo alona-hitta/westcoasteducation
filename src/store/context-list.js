@@ -44,7 +44,7 @@ export const ContextListProvider = (props) => {
 
     const addCourse = (course) => {
         setCourses([
-            ...teachers, course
+            ...courses, course
         ])
     }
 

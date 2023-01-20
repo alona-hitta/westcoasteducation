@@ -2,7 +2,7 @@ import { useContext, useRef } from 'react';
 
 import ListContext from '../../store/context-list';
 
-const AddCourse = (props) => {
+const AddCourse = () => {
     
     const context = useContext(ListContext);
 
@@ -21,18 +21,18 @@ const AddCourse = (props) => {
     }
 
 
-    const onSubmitHandler = async(e) => {
+    const onSubmitHandler = (e) => {
 
       e.preventDefault();
 
 
         let title = courseTitleInput.current.value;
-        let courseNumber = courseNumberInput.current.value;
+        let courseId = courseNumberInput.current.value;
         let startDate = courseStartDateInput.current.value;
-        let duration = courseDurationInput.current.value;
+        let length = courseDurationInput.current.value;
         let description =courseDescriptionInput.current.value;
 
-        const course= {title, courseNumber, startDate,duration, description}
+        const course= {title, courseId, startDate,length, description}
 
         context.addCourse(course);
             
@@ -56,23 +56,23 @@ const AddCourse = (props) => {
         <form onSubmit={onSubmitHandler}>
             <div>
                 <label>Course name:</label>
-                <input id="course-title" type="text" ref={courseTitleInput} />
+                <input id="name" type="text" ref={courseTitleInput} />
             </div>
             <div>
-                <label htmlFor="course-number">Course number:</label>
-                <input id="course-number" type="number" ref={courseNumberInput} />
+                <label htmlFor="courseId">Course number:</label>
+                <input id="courseId" type="number" ref={courseNumberInput} />
             </div>
             <div>
-                <label htmlFor="course-duration">Duration:</label>
-                <input id="course-duration" type="number" ref={courseDurationInput} />
+                <label htmlFor="length">Duration:</label>
+                <input id="length" type="number" ref={courseDurationInput} />
             </div>
             <div>
-                <label htmlFor="duration-unit">date</label>
+                <label htmlFor="startDate">date</label>
                 <input type="date" ref={courseStartDateInput}/>
             </div>
             <div>
-                <label htmlFor="course-description">Description:</label>
-                <textarea id="course-description" type="text" ref={courseDescriptionInput} />
+                <label htmlFor="description">Description:</label>
+                <textarea id="description" type="text" ref={courseDescriptionInput} />
             </div>
             <button type='submit'>Add</button>
             <button onClick={onCancelClickedHandler}>Cancel</button>

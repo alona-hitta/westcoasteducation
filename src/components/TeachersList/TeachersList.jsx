@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import AddTeacher from "../AddTeacher/AddTeacher";
 
 const TeachersList = ({teachers}) => {
 

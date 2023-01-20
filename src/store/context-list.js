@@ -5,6 +5,7 @@ const ContextList = React.createContext({
     teachers:[],
     courses: [],
     addTeacher: () => {},
+    addCourse: () => {},
     error: null
 })
 
@@ -41,6 +42,12 @@ export const ContextListProvider = (props) => {
         ])
     }
 
+    const addCourse = (course) => {
+        setTeachers([
+            ...teachers, course
+        ])
+    }
+
 
     return(
         <ContextList.Provider 
@@ -48,6 +55,7 @@ export const ContextListProvider = (props) => {
             teachers,
             courses,
             addTeacher,
+            addCourse,
             error
         }}>
             {props.children}

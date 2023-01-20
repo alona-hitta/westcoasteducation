@@ -4,6 +4,7 @@ import ListContext from '../../store/context-list';
 const AddTeacher = (props) => {
 
   const context = useContext(ListContext);
+  
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const personalIDRef = useRef();
@@ -43,13 +44,13 @@ const AddTeacher = (props) => {
     context.addTeacher(teacher);
 
     
-    // fetch('http://localhost:3010/courses', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(teacher),
-    // });
+    fetch('http://localhost:3010/teachers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(teacher),
+    });
   }
 
   const onCancelClickHandler = (e) => {

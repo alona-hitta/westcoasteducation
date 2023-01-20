@@ -9,50 +9,43 @@ const AddCourse = () => {
     const courseTitleInput = useRef();
     const courseNumberInput = useRef();
     const courseDurationInput = useRef();
-    const courseUnitInput = useRef();
-    const courseDescriptionInput = useRef();
     const courseStartDateInput = useRef();
+    const courseDescriptionInput = useRef();
     
     const clearForm = () => {
         courseTitleInput.current.value = '';
         courseNumberInput.current.value = '';
-        courseStartDateInput.current.value = '';
         courseDurationInput.current.value = '';
-        courseUnitInput.current.value = '';
+        courseStartDateInput.current.value = '';
         courseDescriptionInput.current.value = '';
     }
 
 
-    const onSubmitHandler = (e) => {
+    const onSubmitHandler = async(e) => {
 
       e.preventDefault();
 
-      const course = {
-        title: courseTitleInput.current.value,
-        courseNumber: courseNumberInput.current.value,
-        startDate: courseStartDateInput.current.value,
-        duration: courseDurationInput.current.value,
-        unit: courseUnitInput.current.value,
-        description:courseDescriptionInput.current.value,
-      };
-      addCourse(course);
-      clearForm();
-    };    
-  
-    const addCourse = async (course) => {
-      try{
-        const response = await fetch('http://localhost:3010/courses', {
+
+        let title = courseTitleInput.current.value;
+        let courseNumber = courseNumberInput.current.value;
+        let startDate = courseStartDateInput.current.value;
+        let duration = courseDurationInput.current.value;
+        let description =courseDescriptionInput.current.value;
+
+        const course= {title, courseNumber, startDate,duration, description}
+
+        context.addCourse(course);
+            
+        fetch('http://localhost:3010/courses', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
             },
             body: JSON.stringify(course),
-          });
-      }
-      catch(error) {
-        console.log(error);
-      }
-    }
+        });
+    };    
+
+
     
     const onCancelClickedHandler = (e) => {
       e.preventDefault();
@@ -68,10 +61,6 @@ const AddCourse = () => {
             <div>
                 <label htmlFor="course-number">Course number:</label>
                 <input id="course-number" type="number" ref={courseNumberInput} />
-            </div>
-            <div>
-                <label htmlFor="course-date">Start date:</label>
-                <input id='course-date' type="date" ref={courseStartDateInput} />
             </div>
             <div>
                 <label htmlFor="course-duration">Duration:</label>

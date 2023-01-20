@@ -27,7 +27,7 @@
     ],
     "teachers": [
       {
-        "id": "1",
+        "id": 1,
         "firstName": "Michael",
         "lastName": "Scott",
         "securityNumber": "19740806-0888",
@@ -36,7 +36,7 @@
         "competenceList": ["programming", "javascript", "c++"]
       },
       {
-        "id": "2",
+        "id": 2,
         "firstName": "Emma",
         "lastName": "Stone",
         "securityNumber": "19801116-0588",
@@ -45,7 +45,7 @@
         "competenceList": ["Jest", "Node.js", "React Native"]
       },
       {
-        "id": "3",
+        "id": 3,
         "firstName": "Jessica",
         "lastName": "Smith",
         "securityNumber": "90566-7771",

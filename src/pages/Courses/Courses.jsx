@@ -8,11 +8,12 @@ const Courses = () => {
     const context = useContext(ListContext);
     const [showModal, setShowModal] = useState(false);
 
-
     return ( 
         <>
-        <h1>Courses</h1>
-        <button onClick={()=> setShowModal(true)}>Add a new course</button>
+        <h1 className="course__heading">Courses</h1>
+        <div className="button__wrap">
+            <button onClick={()=> setShowModal(true)} className="button">Add a new course</button>
+        </div>
             {showModal && (
             <Modal
             showModal={showModal} 

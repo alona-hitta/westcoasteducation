@@ -1,8 +1,12 @@
 import Navigation from '../Navigation/Navigation';
+import Logo from '../../styles/img/westcoast-logo.png';
+
 const Header = () => {
     return ( 
         <header className="header">
-            <h1>Westcoast Education</h1>
+            <div className="header__logo">
+                <img src={Logo} alt="logo" className="logo" />
+            </div>
             <Navigation />
         </header>
      );

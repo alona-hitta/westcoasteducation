@@ -14,8 +14,7 @@ const Navbar = () => {
           <Link  to='/teachers'>Teachers</Link>
         </li>
       </ul>
-    </nav>
-    
+    </nav>    
   );
 };
 export default Navbar;

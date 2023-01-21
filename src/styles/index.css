@@ -1,0 +1,254 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Header*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+a:hover {
+    color:#64ce83;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #CECECE;
+    background: #ffffff;
+    height: 85px;
+    padding: 10px 20px;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    text-transform: capitalize;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+b {
+    font-weight: 700;
+}
+/*links*/
+.link,
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    height: 45px;
+    transition: all 0.3s ease-in-out;
+    background-color: #64ce83;
+}
+.link:hover,
+.button:hover{
+    background-color: #000000;
+    color:#ffffff;
+}
+
+/*Home*/
+
+.home {
+    min-height: 600px;
+    height: 100%;
+    background-image: url("../styles/img/home-cover.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.home__info {
+    position: relative;
+}
+
+.home__info h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.home__info p {
+    font-size: 25px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/*Courses*/
+
+.courses,
+.teachers {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 1rem;
+    position: relative;
+    margin: 20px;
+}
+
+.course__info,
+.teachers__info {
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.course__img,
+.teacher__img {
+    filter: brightness(97%);
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.teacher__img {
+    text-align: center;
+}
+
+.course__about,
+.teacher__about {
+    padding: 20px;
+    line-height: 20px;
+}
+
+.about__link,
+.button__wrap {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.course__heading {
+    font-size: 45px;
+    text-align: center;
+    margin: 30px 20px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .header {
+        height: 142px;
+        flex-direction: column;
+    }
+
+    .home__info {
+        padding: 20px;
+    }
+
+    .home__info h1 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .home__info p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .courses, 
+    .teachers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+}

@@ -11,8 +11,10 @@ const Teachers = () => {
 
     return(
         <>
-            <h1>Teachers:</h1>
-            <button onClick={()=> setShowModal(true)}>Add a new teacher</button>
+            <h1 className="course__heading">Teachers:</h1>
+            <div className="button__wrap">
+                <button onClick={()=> setShowModal(true)}  className="button">Add a new teacher</button>
+            </div>
             {showModal && (
             <Modal
             showModal={showModal} 

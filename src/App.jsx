@@ -6,6 +6,8 @@ import Teachers from './pages/Teachers/Teachers';
 import Course from './pages/Courses/Course/Course';
 import Teacher from './pages/Teachers/Teacher/Teacher';
 import Header from './layout/Header/Header';
+import Footer from './layout/Footer/Footer';
+import index from './styles/index.css'
 function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ function App() {
             <Route path='/teachers' element={<Teachers />} />    
             <Route path='/teachers/:teacherId' element={<Teacher />}/>  
           </Routes>
+          <Footer/>
           <div id="modal-root"></div>
         </div>
   </Router>

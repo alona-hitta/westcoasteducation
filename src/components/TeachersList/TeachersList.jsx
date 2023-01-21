@@ -1,26 +1,34 @@
 import { Link } from 'react-router-dom';
+import TeacherImg from '../../styles/img/teacher.png';
 
 const TeachersList = ({teachers}) => {
 
     return (
             <ul className='teachers'>
             {teachers?.map((teacher) => (
-                <li key={teacher.id}>
-                    <div>
-                        <span> Teacher: {teacher.firstName} {teacher.lastName}</span>
+                <li key={teacher.id} className="teacher">
+                    <div className="teacher__img">
+                        <img src={TeacherImg} alt="teacher image" className="teacher__img" />
                     </div>
-                    <div>
-                        <span>Security number: {teacher.securityNumber}</span>
+                    <div className="teacher__about">
+                        <h2>
+                            <div> <b>Teacher: </b>{teacher.firstName} {teacher.lastName}</div>
+                        </h2>
+                        <div>
+                            <b>Security number:</b> {teacher.securityNumber}
+                        </div>
+                        <div>
+                            <b>Email: </b>{teacher.email}
+                        </div>
+                        <div>
+                            <b>Mobile number:</b> {teacher.mobileNumber}
+                        </div>
+                        <div className="about__link">
+                        <Link className='link' to={`/teachers/${teacher.id}`} >
+                            Read more
+                        </Link>
+                        </div>
                     </div>
-                    <div>
-                        <span className='list__text'>Email: {teacher.email}</span>
-                    </div>
-                    <div>
-                        <span className='list__text'>Mobile number: {teacher.mobileNumber}</span>
-                    </div>
-                    <Link  to={`/teachers/${teacher.id}`} >
-                        Read more
-                    </Link>
                 </li>
             ))}
             </ul>  

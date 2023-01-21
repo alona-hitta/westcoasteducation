@@ -24,8 +24,8 @@ const TeachersList = ({teachers}) => {
                             <b>Mobile number:</b> {teacher.mobileNumber}
                         </div>
                         <div className="about__link">
-                        <Link className='link' to={`/teachers/${teacher.id}`} >
-                            Read more
+                        <Link to={`/teachers/${teacher.id}`} >
+                            <button className='link'>Read more</button>
                         </Link>
                         </div>
                     </div>

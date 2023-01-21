@@ -89,7 +89,8 @@ const AddTeacher = (props) => {
               className='input'
               id='securityNumber'
               type="number" 
-              placeholder='ex: 35647267-1234'
+              placeholder='ex: 199108120224'
+              min="12" max="12"
               ref={personalIDRef}
               required
             />

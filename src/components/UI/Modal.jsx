@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
     return (
         <div className='modal'>
             {props.children}
-            <button onClick={props.onClose}>Close</button>
+            <button onClick={props.onClose} className='link close'>Close</button>
         </div>
     );
   };

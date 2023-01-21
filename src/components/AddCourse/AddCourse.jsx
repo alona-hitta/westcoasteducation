@@ -67,15 +67,17 @@ const AddCourse = () => {
                 <input id="length" type="number" ref={courseDurationInput} />
             </div>
             <div>
-                <label htmlFor="startDate">date</label>
+                <label htmlFor="startDate">Date:</label>
                 <input type="date" ref={courseStartDateInput}/>
             </div>
             <div>
                 <label htmlFor="description">Description:</label>
                 <textarea id="description" type="text" ref={courseDescriptionInput} />
             </div>
-            <button type='submit'>Add</button>
-            <button onClick={onCancelClickedHandler}>Cancel</button>
+            <div className="about__link">
+                <button type='submit' className='link'>Add</button> <br/>
+                <button onClick={onCancelClickedHandler} className='link'>Cancel</button>
+            </div>
         </form>
      );
 }

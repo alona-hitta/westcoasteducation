@@ -18,15 +18,20 @@ const Course = () => {
     }, [courseId, context.courses])
 
     return ( <>
-    <div> Course id: {courseId}</div>
+    <h1 className="course__heading"> Course id: {courseId}</h1>
     {course && 
         <div className="course">
-            <div className="course__info">
-                <h3>{course.name}</h3>
-                <p>{course.length}</p>
-                <p>{course.startDate}</p>
-                <p>{course.description}</p>
-                <Link  to={'/courses'}>Back to courses list</Link>
+            <div className="course__img">
+                <img src={CourseImg} alt="course image" className="course__img" />
+            </div>
+            <div className="details">
+                <h3><b>Course name:</b> {course.name}</h3>
+                <p><b>Course length:</b>{course.length}</p>
+                <p><b>Start date:</b>{course.startDate}</p>
+                <p><b>Course description: </b>{course.description}</p>
+                <div className="button__wrap">
+                    <Link  to={'/courses'} className="link">Back to courses list</Link>
+                </div>
             </div>
 
         </div>

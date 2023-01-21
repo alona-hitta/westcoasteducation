@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import ContextList from '../../../store/context-list';
+import TeacherImg from '../../../styles/img/teacher.png';
 
 const Teacher = () => {
     const { teacherId } = useParams()
@@ -15,26 +16,32 @@ const Teacher = () => {
     }, [teacherId, context.teachers])
 
     return ( <>
-  
     {teacher && 
-                            <div>
-                                <h3>{teacher.firstName} {teacher.lastName}</h3>
-                                <p>Personal id: {teacher.securityNumber}</p>
-                                <p>Email: {teacher.email}</p>
-                                <p>Phone: {teacher.mobileNumber}</p>
-                                <b>Competencies</b>
-                                {teacher.competencies?.split(',').map((competence, index) => {
-                                    return (
-                                        <li key={index}>
-                                            {competence}
-                                        </li>
-                                    )
-                                })}               
-                            </div>                   
-                        }
-                                <Link  to={'/teachers'}>
-           Back to teachers list
+        <div className="teacher">
+            <h1 className="course__heading">{teacher.firstName} {teacher.lastName}</h1>
+            <div className="teacher__img">
+                <img src={TeacherImg} alt="teacher image" className="teacher__img" />
+            </div>
+            <div className="details">
+                <p><b>Personal id: </b>{teacher.securityNumber}</p>
+                <p><b>Email: </b>{teacher.email}</p>
+                <p><b>Phone: </b>{teacher.mobileNumber}</p>
+                <p><b>Competencies</b></p>
+                {teacher.competencies?.split(',').map((competence, index) => {
+                    return (
+                    <li key={index}>
+                        {competence}
+                    </li>
+                    )
+             })} 
+            </div>             
+        </div>                   
+}
+    <div className="button__wrap">
+        <Link  to={'/teachers'} className="link">
+            Back to teachers list
         </Link>
+    </div>
     </> );
 }
  

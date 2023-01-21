@@ -60,44 +60,52 @@ const AddTeacher = (props) => {
 
   return (
     <div className='modal'>
-        <h2 className='heading4'>Add teacher</h2>
         <form onSubmit={onSubmitHandler}>
-          <label htmlFor='firstName'>First name</label>
-          <input 
-            className='input'
-            type="text"
-            id='firstName'
-            placeholder='first name'
-            ref={firstNameRef} 
-            required
-          />
-          <label htmlFor="lastName">Last name</label>
-          <input 
-            className='input'
-            type="text"
-            id='lastName'
-            placeholder='last name'
-            ref={lastNameRef}
-            required 
-          />
-          <label htmlFor="personalID">Personal ID number</label>
-          <input 
-            className='input'
-            id='securityNumber'
-            type="number" 
-            placeholder='ex: 35647267-1234'
-            ref={personalIDRef}
-            required
-          />
-          <label htmlFor="email">Email</label>
-          <input 
-            className='input'
-            type="email"
-            id='email'
-            ref={emailRef} 
-            required
-          />
-          <label htmlFor="mobile">Mobile number</label>
+          <div>
+            <label htmlFor='firstName'>First name:</label>
+            <input 
+              className='input'
+              type="text"
+              id='firstName'
+              placeholder='first name'
+              ref={firstNameRef} 
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="lastName">Last name:</label>
+            <input 
+              className='input'
+              type="text"
+              id='lastName'
+              placeholder='last name'
+              ref={lastNameRef}
+              required 
+            />
+          </div>
+          <div>
+            <label htmlFor="personalID">Personal security number:</label>
+            <input 
+              className='input'
+              id='securityNumber'
+              type="number" 
+              placeholder='ex: 35647267-1234'
+              ref={personalIDRef}
+              required
+            />
+          </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+            <input 
+              className='input'
+              type="email"
+              id='email'
+              ref={emailRef} 
+              required
+            />
+        </div>
+        <div>
+        <label htmlFor="mobile">Mobile number"</label>
           <input 
             className='input'
             type="tel"
@@ -105,7 +113,9 @@ const AddTeacher = (props) => {
             ref={mobileRef} 
             required
           />
-          <label htmlFor="competencies">Skills</label>
+        </div>
+      <div>
+      <label htmlFor="competencies">Skills:</label>
           <textarea 
             className='input'
             type="text"
@@ -113,7 +123,9 @@ const AddTeacher = (props) => {
             ref={competenciesRef} 
             required
           />
-          <label htmlFor="id">Staff ID</label>
+      </div>
+  <div>
+  <label htmlFor="id">Id:</label>
           <input 
             className='input'
             type="number"
@@ -121,8 +133,12 @@ const AddTeacher = (props) => {
             ref={idRef}
             required
           />
-          <button>Add teacher</button>
-          <button onClick={onCancelClickHandler}>Cancel</button>
+  </div>
+  <div className="about__link">
+  <button className='link'>Add teacher</button><br/>
+          <button onClick={onCancelClickHandler} className='link'>Cancel</button>
+  </div>
+
         </form>
       </div>
   )

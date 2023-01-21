@@ -221,7 +221,57 @@ b {
     margin: 30px 20px;
 }
 
+.teacher,
+.course {
+    max-width: 500px;
+    margin: 0 auto;
+}
 
+.details {
+   margin: 20px;
+   line-height: 24px;
+}
+
+/*Modal*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1000;
+}
+
+.modal form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 45px;
+    z-index: 1000;
+    width: 300px;
+}
+
+.modal input,
+.modal textarea {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.modal div {
+    margin-bottom: 20px;
+}
+
+.close {
+    position: relative;
+    z-index: 999999;
+}
+.about__link button {
+    margin-bottom: 20px;
+}
 
 @media only screen and (max-width: 600px) {
     .header {
@@ -250,5 +300,14 @@ b {
         align-items: flex-start;
         justify-content: space-between;
         padding-top: 40px;
+    }
+    .courses li,
+    .teachers li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .teacher {
+        max-width: 100%;
     }
 }
